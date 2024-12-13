@@ -2,273 +2,298 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUNWAY GARMENTS</title>
-    
+    <title>Billing Invoice - Priyanka Global</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Global styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f3f6;
-        }
-
-        /* Header styles */
-        header {
-            background-color: #2874f0;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header h1 {
-            display: inline;
-            font-size: 26px;
-            margin-right: 10px;
-        }
-
-        .search-bar {
-            display: inline-block;
-            width: 50%;
-            margin-left: 20px;
-            vertical-align: middle;
-        }
-
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .search-bar button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #ff9f00;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        nav {
-            background-color: #fff;
+        .header-section {
             display: flex;
-            justify-content: center;
-            padding: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            color: #333;
-            padding: 15px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #2874f0;
-        }
-
-        /* Sidebar for categories */
-        .sidebar {
-            width: 20%;
-            float: left;
-            background-color: white;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .sidebar h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #2874f0;
-        }
-
-        /* Product section styles */
-        .products {
-            width: 75%;
-            float: right;
-            margin: 20px;
-        }
-
-        .product-carousel {
-            background-color: white;
-            padding: 20px;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        .carousel-title {
-            font-size: 20px;
-            margin-bottom: 15px;
+        .header-left {
+            text-align: left;
         }
-
-        .carousel-wrapper {
+        .header-center {
+            text-align: center;
+            width: 100%;
+        }
+        .header-right {
+            text-align: right;
+        }
+        .footer-section {
             display: flex;
-            overflow-x: auto;
+            justify-content: space-between;
+            margin-top: 30px;
         }
-
-        .carousel-wrapper::-webkit-scrollbar {
-            display: none;
+        .footer-notes {
+            text-align: left;
         }
-
-        .product-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            margin-right: 15px;
-            padding: 15px;
-            text-align: center;
-            min-width: 220px;
+        .footer-sign {
+            text-align: right;
         }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .product-card h3 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        .product-card p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .product-card button {
-            background-color: #ff9f00;
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .product-card button:hover {
-            background-color: #fb641b;
-        }
-
-        /* Footer */
         footer {
-            clear: both;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin-bottom: 5px;
+        }
+        footer .signature {
+            text-align: right;
             margin-top: 20px;
+        }
+        /* Styling for the Tax Invoice text */
+        .tax-invoice {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+        }
+        table td input {
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        .total-section input {
+            width: 150px;
         }
     </style>
 </head>
 <body>
+    <div class="invoice-container" id="invoice">
+        <!-- Header Section -->
+        <header>
+            <div class="header-section">
+                <div class="header-left">
+                    <p class="tax-invoice">TAX INVOICE</p>
+                </div>
+                <div class="header-center">
+                    <h1>Priyanka Global</h1> <!-- Shop Name centered -->
+                </div>
+               
+            </div>
 
-<header>
-    <h1>RUNWAY GARMENTS</h1>
-    <div class="search-bar">
-        <input type="text" placeholder="Search for products, brands and more">
-        <button>Search</button>
-        </div>
-</header>
+            <div class="header-section">
+                <div class="header-left">
+                    <p><strong>Address:</strong> 187-188, Shiv Shakti Estate, Gali No.4, Narol Kashiram Road, Nr. Prince Hotel, Narol, Ahmedabad - 382405</p>
+                    <p><strong>Mobile:</strong> 7818881832, 9106895263</p>
+                    <p><strong>Email:</strong> priyankaglobal1994@gmail.com</p>
+                </div>
+                <div class="header-right">
+                    <p><strong>GSTIN:</strong> 24BBMPJ4816K1ZG</p>
+                </div>
+            </div>
+        </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#products">Men</a>
-    <a href="#products">Women</a>
-    <a href="#products">Kids</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact Us</a>
-</nav>
+        <!-- Party & Invoice Details -->
+        <section class="invoice-details">
+            <div class="party-info">
+                <p><strong>M/s Name:</strong> <input type="text" value="Customer Name"></p>
+                <p><strong>Party's GSTIN:</strong> <input type="text" value="22AAAAA0000A1Z5"></p>
+            </div>
+            <div class="bill-info">
+                <p><strong>Bill No:</strong> <input type="text" value="001"></p>
+                <p><strong>Date:</strong> <input type="date" value="2024-12-13"></p>
+                <p><strong>Challan No:</strong> <input type="text" value="12345"></p>
+            </div>
+        </section>
 
-<div class="sidebar">
-    <h3>Categories</h3>
+        <!-- Table for Products/Items -->
+        <table class="invoice-table" id="productTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Style</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>HSN Code</th>
+                    <th>Amount</th>
+                    <th>Action</th> <!-- For remove button -->
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <tr>
+                    <td><input type="text" value="Product 1"></td>
+                    <td><input type="text" value="Style 123"></td>
+                    <td><input type="number" value="10" class="qty" onchange="calculateTotal()"></td>
+                    <td><input type="number" value="500" class="rate" onchange="calculateTotal()"></td>
+                    <td><input type="text" value="6101" class="hsn" onchange="calculateTotal()"></td>
+                    <td><input type="number" value="5000" class="amount" onchange="calculateTotal()"></td>
+                    <td><button class="remove-btn">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Button to Add More Products -->
+        <button id="addProductBtn">Add Product</button>
+
+        <!-- Footer Section for Permanent Bank and Tax Details -->
+        <section class="footer-section">
+            <div class="bank-info">
+                <p><strong>Bank:</strong> Kotak Mahindra Bank</p>
+                <p><strong>Branch:</strong> Narol Ahmedabad</p>
+                <p><strong>A/c No.:</strong> 3811988604</p>
+                <p><strong>IFSC:</strong> KKBK0002604</p>
+            </div>
+            <div class="tax-info total-section">
+                <p><strong>Total:</strong> <input type="number" id="totalAmount" readonly value="5000"></p>
+                <p><strong>CGST 2.5%:</strong> <input type="number" id="cgst" readonly value="125"></p>
+                <p><strong>SGST 2.5%:</strong> <input type="number" id="sgst" readonly value="125"></p>
+                <p><strong>Round Off:</strong> <input type="number" id="roundOff" readonly value="0"></p>
+                <p><strong>Grand Total:</strong> <input type="number" id="grandTotal" readonly value="5250"></p>
+            </div>
+        </section>
+
+        <!-- Bottom GSTIN and Notes Section -->
+        <footer>
+            <div class="footer-notes">
+                <p><strong>Note:</strong></p>
+                <ul>
+                    <li>1. Goods once sold will not be taken back.</li>
+                    <li>2. Subject to Ahmedabad Jurisdiction.</li>
+                    <li>3. E. & O.E.</li>
+                </ul>
+            </div>
+            <div class="footer-sign">
+                <p><strong>For, Priyanka Global</strong></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Action Buttons (Share and Download) -->
+    <button id="shareBtn">Share via Gmail</button>
+    <button id="downloadBtn">Download as PDF</button>
+
+    <!-- JavaScript to Add, Remove Products, Calculate Total, Handle Share/Download -->
+    <script>
+        // Function to calculate the total and taxes
+        function calculateTotal() {
+            let totalAmount = 0;
+
+            // Iterate through all the rows to calculate the total amount
+            const rows = document.querySelectorAll('#productTableBody tr');
+            rows.forEach(row => {
+                const qty = parseFloat(row.querySelector('.qty').value) || 0;
+                const rate = parseFloat(row.querySelector('.rate').value) || 0;
+                const amount = qty * rate;
+
+                row.querySelector('.amount').value = amount; // Update amount cell
+                totalAmount += amount;
+            });
+
+            // Calculate CGST and SGST
+            const cgst = totalAmount * 0.025;
+            const sgst = totalAmount * 0.025;
+
+            // Update the tax and grand total
+            document.getElementById('totalAmount').value = totalAmount.toFixed(2);
+            document.getElementById('cgst').value = cgst.toFixed(2);
+            document.getElementById('sgst').value = sgst.toFixed(2);
+
+            const roundOff = Math.round(totalAmount + cgst + sgst) - (totalAmount + cgst + sgst);
+            document.getElementById('roundOff').value = roundOff;
+
+            const grandTotal = totalAmount + cgst + sgst + roundOff;
+            document.getElementById('grandTotal').value = grandTotal.toFixed(2);
+        }
+
+        // Function to add a new product row
+        document.getElementById('addProductBtn').addEventListener('click', function () {
+            const productTableBody = document.getElementById('productTableBody');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td><input type="text" placeholder="Product Name"></td>
+                <td><input type="text" placeholder="Style"></td>
+                <td><input type="number" class="qty" placeholder="Qty" onchange="calculateTotal()"></td>
+                <td><input type="number" class="rate" placeholder="Rate" onchange="calculateTotal()"></td>
+                <td><input type="text" class="hsn" placeholder="HSN Code" onchange="calculateTotal()"></td>
+                <td><input type="number" class="amount" placeholder="Amount" readonly></td>
+                <td><button class="remove-btn">Remove</button></td>
+            `;
+
+            productTableBody.appendChild(newRow);
+            addRemoveButtonFunctionality(newRow.querySelector('.remove-btn'));
+
+            // Recalculate totals after adding a new product
+            calculateTotal();
+        });
+
+        // Function to remove a product row
+        function addRemoveButtonFunctionality(button) {
+            button.addEventListener('click', function () {
+                button.parentElement.parentElement.remove(); // Remove the row
+                calculateTotal(); // Recalculate totals
+            });
+        }
+
+        // Attach remove functionality to the initial product row
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            addRemoveButtonFunctionality(button);
+        });
+
+        // Hide all buttons (including add/remove) when sharing or downloading
+        function hideButtons() {
+            document.querySelectorAll('button').forEach(button => {
+                button.style.display = 'none';
+            });
+        }
+
+        // Restore all buttons after the action is done
+        function restoreButtons() {
+            document.querySelectorAll('button').forEach(button => {
+                button.style.display = 'inline-block';
+            });
+        }
+
+        // Share via Gmail functionality
+        document.getElementById('shareBtn').addEventListener('click', function () {
+            hideButtons();
+            const invoiceContent = document.getElementById('invoice').innerHTML;
+            const emailBody = encodeURIComponent(invoiceContent);
+
+            // Prepare Gmail sharing link
+            const mailtoLink = `mailto:?subject=Invoice from Priyanka Global&body=${emailBody}`;
+            window.location.href = mailtoLink;
+
+            // Restore buttons after a short delay
+            setTimeout(restoreButtons, 2000);
+        });
+
+        // Download as PDF functionality
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            hideButtons();
+
+            // Use jsPDF library to download the content as a PDF
+            const doc = new jsPDF();
+            doc.fromHTML(document.getElementById('invoice'), 15, 15, {
+                width: 170
+            });
+
+            // Save the generated PDF
+            doc.save('invoice.pdf');
+
+            // Restore buttons after download
+            restoreButtons();
+        });
+
+        // Initial calculation
+        calculateTotal();
+    </script>
     
-    <ul>
-        <li><a href="#">T-Shirts</a></li>
-        <li><a href="#">Shirts</a></li>
-        <li><a href="#">Jeans</a></li>
-        <li><a href="#">Jackets</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Accessories</a></li>
-    </ul>
-</div>
-<h2> WORK IN PROCESS</h2>
-<div class="products">
-    <div class="product-carousel">
-        
-        <div class="carousel-title">Top Deals</div>
-        <div class="carousel-wrapper">
-            <div class="product-card">
-                <img src="shirt.jpg" alt="Shirt">
-                <h3>Casual Shirt</h3>
-                <p>$25</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="jeans.jpg" alt="Jeans">
-                <h3>Denim Jeans</h3>
-                <p>$40</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="jacket.jpg" alt="Jacket">
-                <h3>Leather Jacket</h3>
-                <p>$75</p>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more product cards as needed -->
-        </div>
-    </div>
-
-    <div class="product-carousel">
-        <div class="carousel-title">Best Sellers</div>
-        <div class="carousel-wrapper">
-            <div class="product-card">
-                <img src="shoe.jpg" alt="Shoes">
-                <h3>Running Shoes</h3>
-                <p>$60</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="bag.jpg" alt="Bag">
-                <h3>Leather Bag</h3>
-                <p>$120</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="watch.jpg" alt="Watch">
-                <h3>Wrist Watch</h3>
-                <p>$45</p>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more product cards as needed -->
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 RUNWAY GARMENTS. All Rights Reserved.</p>
-</footer>
-
+    <!-- Add jsPDF library to generate PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </body>
 </html>
